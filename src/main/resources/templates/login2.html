@@ -1,0 +1,27 @@
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<!-- Thymeleaf为我们提供的Spring Security的标签支持 -->
+<head>
+<meta content="text/html;charset=UTF-8" />
+<title sec:authentication="name"></title>
+<!-- 获得当前用户的用户名 -->
+</head>
+<body style="text-align: center;">
+	<h1>登录认证</h1>
+	<form action="login" method="post" style="color: blue;">
+		<p>
+			用户名：<input type="text" id="username" name="username" />
+		</p>
+		<p>
+			密码:<input type="text" id="password" name="password" />
+		</p>
+		<p>
+			<button type="submit">提交</button>
+		</p>
+		<input type="hidden"                        
+		th:name="${_csrf.parameterName}"
+		th:value="${_csrf.token}"
+		th:if="${_csrf}"/>
+	</form>
+</body>
+</html>

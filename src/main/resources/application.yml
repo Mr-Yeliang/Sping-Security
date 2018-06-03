@@ -1,0 +1,23 @@
+#security:
+#  user:
+#    name: root
+#    password: 123456
+#    
+#  basic:
+#    enabled: false
+#  
+#    
+#server:
+#  port: 9090
+#  
+#  
+#spring:
+#  messages:
+#    basename: messages
+#  mobile:
+#    devicedelegatingviewresolver:
+#      enabled: true
+#    sitepreference:
+#      enabled: true
+    
+    
